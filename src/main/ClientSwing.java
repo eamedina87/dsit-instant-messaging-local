@@ -7,7 +7,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 import publisher.Publisher;
-import publisher.PublisherImpl;
 import subscriber.Subscriber;
 import subscriber.SubscriberImpl;
 import topicmanager.TopicManager;
@@ -132,8 +131,6 @@ public class ClientSwing {
                     my_subscriptions.remove(publisherTopic);
                 }
                 publisherTopic = argument_TextField.getText();
-                //publisher = PublisherImpl.getInstance(publisherTopic);
-                
                 if (subscriber==null){
                     subscriber = new SubscriberImpl(ClientSwing.this);
                 }
@@ -193,7 +190,7 @@ public class ClientSwing {
             
             if (publisher!=null){
                 String event = argument_TextField.getText();
-                pubhttps://github.com/eamedina87/dsit-instant-messaging-local.gitlisher.publish(publisherTopic, event);
+                publisher.publish(publisherTopic, event);
                 argument_TextField.setText("");
             }
             
