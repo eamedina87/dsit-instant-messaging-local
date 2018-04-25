@@ -37,9 +37,7 @@ public class PublisherImpl implements PublisherAdmin, Publisher {
         numPublishers = 1;
         this.mTopic = topic;
     }
-    
    
-    
     public int incPublishers(){
         return ++numPublishers;
     }

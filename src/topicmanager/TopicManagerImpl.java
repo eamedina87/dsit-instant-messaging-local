@@ -23,6 +23,7 @@ public class TopicManagerImpl implements TopicManager {
     }
     public Publisher addPublisherToTopic(String topic){        
         PublisherImpl publisher = new PublisherImpl(topic);
+        //TODO publisher.incPublishers();
         topicMap.put(topic, publisher);
         return publisher;
     }
